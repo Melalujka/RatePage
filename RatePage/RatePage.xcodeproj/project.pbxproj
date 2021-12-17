@@ -27,6 +27,7 @@
 		2A385F3E27666142002D3798 /* CurrencyRateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A385F3D27666142002D3798 /* CurrencyRateCell.xib */; };
 		2A385F402766616A002D3798 /* CurrencyRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A385F3F2766616A002D3798 /* CurrencyRateCell.swift */; };
 		2A385F422766639F002D3798 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A385F412766639F002D3798 /* CountryView.swift */; };
+		2ABE6B45276CF0D3005F16AB /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE6B44276CF0D3005F16AB /* HeaderView.swift */; };
 		6D56E836318940F07049A57C /* Pods_RatePage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4130E61E585A570ECFEF6E /* Pods_RatePage.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		2A385F3D27666142002D3798 /* CurrencyRateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrencyRateCell.xib; sourceTree = "<group>"; };
 		2A385F3F2766616A002D3798 /* CurrencyRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRateCell.swift; sourceTree = "<group>"; };
 		2A385F412766639F002D3798 /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
+		2ABE6B44276CF0D3005F16AB /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		4D4130E61E585A570ECFEF6E /* Pods_RatePage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RatePage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA101CB45A3BE8428DF268B7 /* Pods-RatePage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatePage.debug.xcconfig"; path = "Target Support Files/Pods-RatePage/Pods-RatePage.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +140,7 @@
 				2A385F3D27666142002D3798 /* CurrencyRateCell.xib */,
 				2A385F3F2766616A002D3798 /* CurrencyRateCell.swift */,
 				2A385F412766639F002D3798 /* CountryView.swift */,
+				2ABE6B44276CF0D3005F16AB /* HeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				2A385F1C2766260D002D3798 /* Launcher.swift in Sources */,
 				2A385F3627664105002D3798 /* ViewModel.swift in Sources */,
 				2A385F3A27665D6C002D3798 /* UIStoryboard+Extension.swift in Sources */,
+				2ABE6B45276CF0D3005F16AB /* HeaderView.swift in Sources */,
 				2A385F29276629CA002D3798 /* NetworkManager.swift in Sources */,
 				2A385F2727662890002D3798 /* NetworkService.swift in Sources */,
 				2A385F402766616A002D3798 /* CurrencyRateCell.swift in Sources */,

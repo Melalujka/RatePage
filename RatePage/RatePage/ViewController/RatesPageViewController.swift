@@ -48,9 +48,10 @@ class RatesPageViewController: UIViewController {
     private func setup() {
         initDataSource()
         tableView?.dataSource = dataSource
+        tableView?.delegate = self
     }
     
-    func initDataSource() {
+    private func initDataSource() {
         guard let tableView = tableView else { return }
 
         tableView.register(UINib(nibName: CurrencyRateCell.identifier, bundle: nil), forCellReuseIdentifier: CurrencyRateCell.identifier)
@@ -75,3 +76,12 @@ class RatesPageViewController: UIViewController {
     }
 }
 
+extension RatesPageViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let sectionIdentifier = dataSource?.sectionIdentifier(for: section) else { return nil }
+        let header = HeaderView()
+        header.setTitle("Торговая площадка №\(sectionIdentifier)")
+        
+        return header
+    }
+}

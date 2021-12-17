@@ -19,9 +19,17 @@ class CurrencyRateCell: UITableViewCell {
     @IBOutlet weak var deltaSaleLabel: UILabel?
     @IBOutlet weak var countriesView: CountryView?
     
+    let upTrendColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+    let downColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+    let stagnationTrendColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupView()
+    }
+    
+    private func setupView() {
+        selectionStyle = .none
     }
     
     func configure(_ model: Rate) {
@@ -43,10 +51,6 @@ class CurrencyRateCell: UITableViewCell {
 
         return delta > 0 ? Constants.upTrend : delta < 0 ? Constants.downTrend : ""
     }
-    
-    let upTrendColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
-    let downColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
-    let stagnationTrendColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
 
     func deltaColor(with string: String) -> UIColor {
         guard let delta = Double(string) else { return stagnationTrendColor }
@@ -65,8 +69,6 @@ class CurrencyRateCell: UITableViewCell {
     
     func getFlag(from countryCode: String) -> String {
         let isoCountryCode = String(countryCode.prefix(2))
-
-//        guard NSLocale.isoCountryCodes.contains(isoCountryCode) else { return "" }
         
         return isoCountryCode
             .unicodeScalars
